@@ -18,11 +18,25 @@ Input: nums = [4,5,6,7,0,1,2], target = 3
 Output: -1
 '''
 
-class Solution:
-	# Should have used binary search as the array is sorted, will be updating the code soon1
-    def search(self, nums: List[int], target: int) -> int:
-        for i in range(len(nums)):
-            if nums[i] == target:
-                return i
+class Solution(object):
+    def search(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        low , high = 0, len(nums)
+        while low < high:
+            mid = (low + high) // 2
+            if nums[mid] < nums[0] <= target: 
+                high = mid
+            elif nums[mid] > nums[0] > target: 
+                low = mid + 1
+            elif nums[mid] < target:
+                low = mid + 1
+            elif nums[mid] > target:
+                high = mid
+            else:
+                return mid
         return -1
                 
