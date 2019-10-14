@@ -1,12 +1,11 @@
 '''
 Author : MiKueen
 Level : Medium
-Problem Statement : Unique Binary Search Tree II
+Problem Statement : Unique Binary Search Trees II
 
 Given an integer n, generate all structurally unique BST's (binary search trees) that store values 1 ... n.
 
 Example:
-
 Input: 3
 Output:
 [
