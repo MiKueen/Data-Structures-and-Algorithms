@@ -28,9 +28,17 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        for i in range(len(nums)):
-            if nums[abs(nums[i])] > 0:
-                nums[abs(nums[i])] = -nums[abs(nums[i])]
-            else:
-                return abs(nums[i])
+        # Using hare and tortoise method
+        slow = fast = nums[0]
+        
+        while True:
+            slow, fast = nums[slow], nums[nums[fast]]
+            if slow == fast:
+                break
+            
+        fast = nums[0]
+        while slow != fast:
+            slow, fast = nums[slow], nums[fast]
+        
+        return slow
                 
