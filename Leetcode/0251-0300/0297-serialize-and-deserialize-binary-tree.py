@@ -68,16 +68,16 @@ class Codec:
         data = data.split(', ')
         
         def dfs():
-            if data[self.i] == 'None':
-                self.i += 1
+            if data[i[0]] == 'None':
+                i[0] += 1
                 return None
-            root = TreeNode(int(data[self.i]))
-            self.i += 1
+            root = TreeNode(int(data[i[0]]))
+            i[0] += 1
             root.left = dfs()
             root.right = dfs()
             return root
         
-        self.i = 0
+        i = [0]
         return dfs()
     
     
