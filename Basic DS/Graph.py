@@ -163,7 +163,7 @@ class Graph(object):
         RETURN: a list of the node values (integers)."""
         node = self.find_node(start_node_num)
         self._clear_visited()
-        ret_list = [node.value]
+        ret_list = []
         queue = [node]
         node.visited = True
         def enqueue(n, q=queue):
