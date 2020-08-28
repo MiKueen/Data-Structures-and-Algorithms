@@ -36,10 +36,10 @@ class Solution:
         """
         :rtype: int
         """
-        rand40 = 40
-        while rand40 >= 40:
-            rand40 = (rand7() - 1) * 7 + rand7() - 1
-        return rand40 % 10 + 1
+        curr = 40
+        while curr >= 40:
+            curr = (rand7() - 1) * 7 + rand7() - 1
+        return curr % 10 + 1
     
 '''
 # The randN() API is already defined for you.
