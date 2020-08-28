@@ -60,5 +60,6 @@ class Solution:
         # if current no is not in the acceptable range, discard it and repeat the process again
         while curr >= acceptable:
             curr = (randN() - 1) * N + randN() - 1
+            
         return curr % M + 1
 '''
