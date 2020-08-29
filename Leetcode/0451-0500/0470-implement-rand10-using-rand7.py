@@ -44,7 +44,7 @@ class Solution:
 '''
 # The randN() API is already defined for you.
 # def randN():
-# @return a random integer in the range 1 to N
+# @return a random integer in the range 1 to M
 
 class Solution:
 
